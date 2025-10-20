@@ -7,7 +7,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/akkaraponph/orchwf"
+	"github.com/refactorroom/orchwf"
 )
 
 func main() {

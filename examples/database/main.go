@@ -7,9 +7,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/akkaraponph/orchwf"
-	"github.com/akkaraponph/orchwf/migrate"
 	_ "github.com/lib/pq" // PostgreSQL driver
+	"github.com/refactorroom/orchwf"
+	"github.com/refactorroom/orchwf/migrate"
 )
 
 func main() {

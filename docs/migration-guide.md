@@ -22,7 +22,7 @@ import (
     "database/sql"
     "log"
     
-    "github.com/refactorroom/orchwf/migrate"
+    "github.com/akkaraponph/orchwf/migrate"
     _ "github.com/lib/pq" // PostgreSQL driver
 )
 
@@ -47,7 +47,7 @@ func main() {
 
 ```bash
 # Install the CLI tool
-go install github.com/refactorroom/orchwf/cmd/orchwf-migrate
+go install github.com/akkaraponph/orchwf/cmd/orchwf-migrate
 
 # Apply migrations
 orchwf-migrate up -db "postgres://user:pass@localhost/dbname?sslmode=disable"
@@ -120,8 +120,8 @@ import (
     "database/sql"
     "log"
     
-    "github.com/refactorroom/orchwf"
-    "github.com/refactorroom/orchwf/migrate"
+    "github.com/akkaraponph/orchwf"
+    "github.com/akkaraponph/orchwf/migrate"
     _ "github.com/lib/pq"
 )
 
@@ -146,7 +146,7 @@ package main
 import (
     "context"
     "database/sql"
-    "github.com/refactorroom/orchwf/migrate"
+    "github.com/akkaraponph/orchwf/migrate"
     _ "github.com/lib/pq"
 )
 
@@ -185,7 +185,7 @@ import (
     "database/sql"
     "time"
     
-    "github.com/refactorroom/orchwf/migrate"
+    "github.com/akkaraponph/orchwf/migrate"
     _ "github.com/lib/pq"
 )
 
@@ -212,10 +212,10 @@ func main() {
 
 ```bash
 # Install from source
-go install github.com/refactorroom/orchwf/cmd/orchwf-migrate
+go install github.com/akkaraponph/orchwf/cmd/orchwf-migrate
 
 # Or build locally
-go build -o orchwf-migrate github.com/refactorroom/orchwf/cmd/orchwf-migrate
+go build -o orchwf-migrate github.com/akkaraponph/orchwf/cmd/orchwf-migrate
 ```
 
 ### Commands

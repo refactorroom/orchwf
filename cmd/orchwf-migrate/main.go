@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/akkaraponph/orchwf/migrate"
+	"github.com/refactorroom/orchwf/migrate"
 )
 
 func main() {

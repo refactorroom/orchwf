@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/akkaraponph/orchwf"
+	"github.com/refactorroom/orchwf"
 )
 
 // BatchProcessor handles batch processing of workflows
