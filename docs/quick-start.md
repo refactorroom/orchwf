@@ -5,7 +5,7 @@ Get up and running with ORCHWF in just a few minutes!
 ## Installation
 
 ```bash
-go get github.com/akkaraponph/orchwf
+go get github.com/refactorroom/orchwf
 ```
 
 ## Basic Example
@@ -20,7 +20,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/akkaraponph/orchwf"
+    "github.com/refactorroom/orchwf"
 )
 
 func main() {
@@ -78,7 +78,7 @@ import (
     "log"
     
     _ "github.com/lib/pq"
-    "github.com/akkaraponph/orchwf"
+    "github.com/refactorroom/orchwf"
 )
 
 func main() {

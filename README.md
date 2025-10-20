@@ -16,7 +16,7 @@ ORCHWF is a powerful Go package for orchestrating complex workflows with support
 ## Installation
 
 ```bash
-go get github.com/akkaraponph/orchwf
+go get github.com/refactorroom/orchwf
 ```
 
 ## Quick Start
@@ -31,7 +31,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/akkaraponph/orchwf"
+    "github.com/refactorroom/orchwf"
 )
 
 func main() {
@@ -79,7 +79,7 @@ import (
     "log"
     
     _ "github.com/lib/pq" // PostgreSQL driver
-    "github.com/akkaraponph/orchwf"
+    "github.com/refactorroom/orchwf"
 )
 
 func main() {
