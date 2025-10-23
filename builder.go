@@ -137,6 +137,12 @@ func (b *StepBuilder) WithAsync(async bool) *StepBuilder {
 	return b
 }
 
+// WithPriority sets the step priority (higher number = higher priority)
+func (b *StepBuilder) WithPriority(priority int) *StepBuilder {
+	b.step.Priority = priority
+	return b
+}
+
 // Build returns the step definition
 func (b *StepBuilder) Build() (*StepDefinition, error) {
 	if b.step.ID == "" {

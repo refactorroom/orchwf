@@ -67,6 +67,7 @@ type StepDefinition struct {
 	Timeout      time.Duration
 	Required     bool // If false, failure won't stop the workflow
 	Async        bool // If true, step runs asynchronously
+	Priority     int  // Higher number = higher priority (default: 0)
 }
 
 // RetryPolicy defines retry behavior for a step
@@ -80,40 +81,40 @@ type RetryPolicy struct {
 
 // WorkflowInstance represents a running instance of a workflow
 type WorkflowInstance struct {
-	ID             string
-	WorkflowID     string
-	Status         WorkflowStatus
-	Input          map[string]interface{}
-	Output         map[string]interface{}
-	Context        map[string]interface{}
-	CurrentStepID  string
-	Steps          []*StepInstance
-	StartedAt      time.Time
-	CompletedAt    *time.Time
-	Error          *string
-	RetryCount     int
-	LastRetryAt    *time.Time
-	Metadata       map[string]interface{}
-	TraceID        string
-	CorrelationID  string
-	BusinessID     string
+	ID            string
+	WorkflowID    string
+	Status        WorkflowStatus
+	Input         map[string]interface{}
+	Output        map[string]interface{}
+	Context       map[string]interface{}
+	CurrentStepID string
+	Steps         []*StepInstance
+	StartedAt     time.Time
+	CompletedAt   *time.Time
+	Error         *string
+	RetryCount    int
+	LastRetryAt   *time.Time
+	Metadata      map[string]interface{}
+	TraceID       string
+	CorrelationID string
+	BusinessID    string
 }
 
 // StepInstance represents a running instance of a step
 type StepInstance struct {
-	ID              string
-	StepID          string
-	WorkflowInstID  string
-	Status          StepStatus
-	Input           map[string]interface{}
-	Output          map[string]interface{}
-	StartedAt       *time.Time
-	CompletedAt     *time.Time
-	Error           *string
-	RetryCount      int
-	LastRetryAt     *time.Time
-	DurationMs      int64
-	ExecutionOrder  int
+	ID             string
+	StepID         string
+	WorkflowInstID string
+	Status         StepStatus
+	Input          map[string]interface{}
+	Output         map[string]interface{}
+	StartedAt      *time.Time
+	CompletedAt    *time.Time
+	Error          *string
+	RetryCount     int
+	LastRetryAt    *time.Time
+	DurationMs     int64
+	ExecutionOrder int
 }
 
 // WorkflowEvent represents an event in the workflow lifecycle
