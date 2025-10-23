@@ -3,6 +3,7 @@ package orchwf
 import (
 	"context"
 	"fmt"
+	"sort"
 	"sync"
 	"time"
 
@@ -281,6 +282,11 @@ func (o *Orchestrator) executeSteps(ctx context.Context, workflow *WorkflowDefin
 		if len(readySteps) == 0 {
 			break
 		}
+
+		// Sort ready steps by priority (higher priority first)
+		sort.Slice(readySteps, func(i, j int) bool {
+			return readySteps[i].Priority > readySteps[j].Priority
+		})
 
 		// Separate sync and async steps
 		var syncSteps, asyncSteps []*StepDefinition

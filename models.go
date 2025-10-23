@@ -47,6 +47,7 @@ type ORCHStepInstance struct {
 	LastRetryAt    *time.Time
 	DurationMs     int64
 	ExecutionOrder int
+	Priority       int
 	CreatedAt      time.Time
 	UpdatedAt      time.Time
 }

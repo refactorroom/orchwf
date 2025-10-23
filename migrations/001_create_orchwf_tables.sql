@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS orchwf_step_instances (
     last_retry_at TIMESTAMP,
     duration_ms BIGINT DEFAULT 0,
     execution_order INT NOT NULL,
+    priority INT DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (workflow_inst_id) REFERENCES orchwf_workflow_instances(id) ON DELETE CASCADE
@@ -55,6 +56,7 @@ CREATE INDEX IF NOT EXISTS idx_orchwf_step_instances_step_id ON orchwf_step_inst
 CREATE INDEX IF NOT EXISTS idx_orchwf_step_instances_workflow_inst_id ON orchwf_step_instances(workflow_inst_id);
 CREATE INDEX IF NOT EXISTS idx_orchwf_step_instances_status ON orchwf_step_instances(status);
 CREATE INDEX IF NOT EXISTS idx_orchwf_step_instances_execution_order ON orchwf_step_instances(workflow_inst_id, execution_order);
+CREATE INDEX IF NOT EXISTS idx_orchwf_step_instances_priority ON orchwf_step_instances(workflow_inst_id, priority DESC);
 
 -- Workflow events table
 CREATE TABLE IF NOT EXISTS orchwf_workflow_events (
